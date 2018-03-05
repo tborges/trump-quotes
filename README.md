@@ -7,4 +7,6 @@
 ![Carousel JavaScript](https://github.com/tborges/JavaScript/blob/master/Carousel%20JavaScript/screen-shot.png)
 <br>
 <br>
-
+<center>
+This website is for an intended humorous or rhetorical effect. Not really intended to create any positive outcomes.<br><br>
+</center>
