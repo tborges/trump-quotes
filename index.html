@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html amp  lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>PLAY WITH TRUMP - JavaScript Carousel / Slideshow / Quote Generator</title>
+        <meta name="description" content="Play with Trump Quotes - Funny quotes about JavaScript that makes Trump a real coder.">
+        <meta name="keywords" content="Trump quotes, JavaScript quotes, Funny Trump Quotes, " />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+
+        <!-- Standalone AMP -->
+        <link rel="canonical" href="http://playwithtrump.com/index.html">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="Trump Quotes" />
+        <meta property="og:title" content="Play with Trump Quotes - Funny Quotes" />
+        <meta property="og:description" content="Funny quotes about JavaScript that makes Trump a real coder." />
+        <meta property="og:url" content="http://PlayWithTrump.com/index.html" />
+        <meta property="og:image" content="http://PlayWithTrump.com/images/celebrity.png" />
+
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Donald Trump",
+            "alternateName": "Mr. Trump",
+            "disambiguatingDescription": "45th President of the United States",
+            "url": "http://playwithtrump.com",
+            "description": "Play with Trump Quotes - Funny quotes about JavaScript that makes Trump a real coder.",
+            "makesOffer": "Trump Quotes",
+            
+            "children": {
+            "@type": "Person",
+            "name": "Ivanka Trump",
+            "disambiguatingDescription": "American model and businesswoman"},
+ 
+            "image":    {
+            "@type": "ImageObject",
+            "url": "http://playwithtrump.com/images/celebrity.png",
+            "height": 250,
+            "width": 250
+            }
+            }
+        </script>
+
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async src="carousel.js" type="text/javascript"></script>  
+
+
+
+        <style amp-custom> 
+            html, body{text-align:center;color:#707070;background-image:url(images/to-serve-man.jpg);background-size:cover;height:100%;margin-bottom: 15%;}
+            .page-wrap{padding:20px 10px 20px 10px;}
+            footer {background-color: #424242;position: fixed;bottom: 0px;left: 0px;right: 0px;height: 9%;margin-bottom: 0px;font-family:monospace;color:#8a8a8a;padding-top:15px;}
+            h2{font-family: 'Nanum Gothic Coding';padding:1% 0% 1% 0%;}
+            p{font-size: 15px;color:#707070;}
+            #nextPrev{padding-top:20px;}
+            #prev{padding-right:20px;color:oldlace;margin: 10px;}
+            #next{color:oldlace;}
+            button{padding:10px 20px;background-color:#707070;color:black;border:none;border-radius:5px;}
+            #quotes{height:90px;font-family: 'Nanum Gothic Coding', monospace;color:#ecf0f1;}
+            blockquote  {padding:10px 20px 50px 20px;background-color:rgb(219, 246, 255);font-size: 6vmin;text-align: center;z-index: 23;color:#333;border-radius: 25px;position: relative;}
+            blockquote:before {content: "";display: block;width: 0;height: 0;border-right: 30px solid rgb(219, 246, 255);border-top: 20px solid transparent;border-bottom: 20px solid transparent;position: absolute;top:30%;right: 100%;}
+            blockquote:hover{background-color: rgba(255, 255, 255, 0.9);}
+            #changeLink b {font-size: 20px;}
+            div.first-column p{margin-top: 20px;}
+            
+            #celebrity-img{ width:200px; height: 200px; padding-left: 10%; }
+            /*
+            @media screen and (max-device-width: 445px){
+                #celebrity-img{ width:170px; height: 170px;padding-left: 0%; }
+            .first-column{width:40%;}
+            }
+            
+            @media screen and (max-device-width: 888px){
+                
+            .second-column{width:150%;}}
+            
+            @media screen and (min-device-width: 1200px) { 
+                #celebrity-img{ width:200px; height: 200px;padding-left: 30%; }}
+            */
+            
+            /* CSS GRID */
+            .container1{font-size: 18px;color:white;text-align: center;}
+            .container1{display:grid;grid-template-columns: 1fr 3fr ;grid-template-rows: 50px 50px;;}
+
+            /* TWITTER ANIMATION SHARE QUOTES */
+            .custom-tweet-button.text-center a {  color:#00aced;text-decoration: none; }
+            .custom-tweet-button.text-center a blockquote {color:#00aced;}
+            .custom-tweet-button.text-center a blockquote:hover { background-color:rgb(159, 230, 252); opacity: 0.5; color:#000 }
+            .twitter-svg{margin-top: 50px;margin-bottom: -19px;}
+            .twitter-button{font-size:15px;}
+
+
+
+
+
+        </style>
+
+        <!-- AMP-ANALYTICS -->
+        <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+
+    </head>
+
+
+    <body>
+        <div class="page-wrap">
+            <h2>Trump the JavaScript Quoter</h2>
+
+            <div id="quotes">
+                <!-- CSS GRID - 3 COLUMNS -->
+                <div class="container1">
+
+                    <!-- FIRST COLUMN -->
+                    <!-- CELEBRITY Trump -->
+                    <div class="first-column">
+                        <amp-img layout="responsive" width="200" height="200" src="images/celebrity.svg"></amp-img>
+                        <!-- PREV NEXT BUTTON -->
+                        <div id="nextPrev" onclick="playSound();">
+                            <span><button id="prev" class="click-sound" onclick="nextQuote(1)">PREV</button></span>
+                            <span><button id="next" class="click-sound" onclick="nextQuote(-1)">NEXT</button></span>
+                        </div>
+                        <p>Random <strike>Quote</strike> Audio Machine <br> Free Code Camp</p>
+
+                    </div>
+
+                    <!-- SECOND COLUMN -->
+                    <!-- QUEUE QUOTE GENERATOR -->
+                    <div class="second-column">
+                        <div class="custom-tweet-button text-center">
+                            <blockquote>
+                                <div class="myQuotes" id="one">
+                                    <a id="changeLink" href="https://twitter.com/intent/tweet?url=https://goo.gl/1ugb95&amp;text=Java is to JavaScript what Car is to Carpet. - PlayWithTrump.com &amp"  target="_blank" title="Tweet this pen">
+                                        "Java is to JavaScript what Car is to Carpet." <b>- Trump Quoter</b>
+                                        <div class="twitter-button"><span><svg xmlns="http://www.w3.org/2000/svg" class="twitter-svg" viewBox="0 0 612 612" width="50" height="50"><path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#00aced"/></svg></amp-img></span><span>twitter me</span></div>
+                                    </a>
+                                </div>
+                                <div class="myQuotes" id="two">
+                                    <a id="changeLink" href="https://twitter.com/intent/tweet?url=https://goo.gl/1ugb95&amp;text=As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible. - PlayWithTrump.com&amp"  target="_blank" title="Tweet this pen">
+                                        "As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible." <b>- Trump Quoter</b>
+                                        <div class="twitter-button"><span><svg xmlns="http://www.w3.org/2000/svg" class="twitter-svg" viewBox="0 0 612 612" width="50" height="50"><path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#00aced"/></svg></span><span>twitter me</span></div>
+                                    </a>
+                                </div>
+                                <div class="myQuotes" id="three">
+                                    <a id="changeLink" href="https://twitter.com/intent/tweet?url=https://goo.gl/1ugb95&amp;text=Go is the language JavaScript programmers retire to when they get old. Like the Florida of programming languages. - PlayWithTrump.com&amp"  target="_blank" title="Tweet this pen">
+                                        "Go is the language JavaScript programmers retire to when they get old. Like the Florida of programming languages." <b>- Trump Quoter</b>
+                                        <div class="twitter-button"><span><svg xmlns="http://www.w3.org/2000/svg" class="twitter-svg" viewBox="0 0 612 612" width="50" height="50"><path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#00aced"/></svg></span><span>twitter me</span></div>
+                                    </a></div>
+                                <div class="myQuotes" id="four">
+                                    <a id="changeLink" href="https://twitter.com/intent/tweet?url=https://goo.gl/1ugb95&amp;text=The strength of JavaScript is that you can do anything. The weakness is that you will. - PlayWithTrump.com &amp"  target="_blank" title="Tweet this pen">
+                                        "The strength of JavaScript is that you can do anything. The weakness is that you will." <b>- Trump Quoter</b>
+                                        <div class="twitter-button"><span><svg xmlns="http://www.w3.org/2000/svg" class="twitter-svg" viewBox="0 0 612 612" width="50" height="50"><path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#00aced"/></svg></span><span>twitter me</span></div>
+                                    </a>
+                                </div>
+                                <div class="myQuotes" id="five">
+                                    <a id="changeLink" href="https://twitter.com/intent/tweet?url=https://goo.gl/1ugb95&amp;text=It's hard enough to find an error in your code when you're looking for it; it's even harder when you've assumed your code is error-free. - PlayWithTrump.com&amp"  target="_blank" title="Tweet this pen">
+                                        "It's hard enough to find an error in your code when you're looking for it; it's even harder when you've assumed your code is error-free." <b>- Trump Quoter</b>
+                                        <div class="twitter-button"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" width="50" height="50"><path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#00aced"/></svg></span><span>twitter me</span></div>
+                                    </a>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- THIRD COLUMN -->
+                    <div class="third-column">&nbsp;</div>
+                </div>
+            </div>
+
+
+
+            <footer>
+                This website is for an intended humorous or rhetorical effect.<br>
+                Not really intended to create any positive outcomes.<br><br>
+                Made in Trump City, California
+            </footer>
+
+
+
+            <amp-analytics type="googleanalytics">
+                <script type="application/json">
+                    {
+                    "vars": {
+                    "account": "UA-30145059-27"
+                    },
+                    "triggers": {
+                    "default pageview": {
+                    "on": "visible",
+                    "request": "pageview",
+                    "vars": {
+                    "title": "Play With Trump"
+                    }
+                    }
+                    }
+                    }
+                </script>
+            </amp-analytics>
+        </div>
+    </body>
+</html>
